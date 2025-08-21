@@ -1,13 +1,10 @@
 .header {
-  background-color: transparent; /* Inicio transparente */
-  color: black;
-  padding: 1rem 0;
+  background-color: #1f2937; /* Inicio transparente */
+  padding: 10px 0; /* Espacio alrededor del contenido */
   box-shadow: 0 2px 5px rgba(0,0,0,0); /* sin sombra al inicio */
-  position: fixed; /* para que siempre quede visible */
-  top: 0;
-  left: 0;
+ /* para que siempre quede visible */
   width: 100%;
-  z-index: 1000;
+  position: sticky; /* Fija la cabecera en la parte superior */
   transition: background-color 0.3s, box-shadow 0.3s; /* transición suave */
 }
 
