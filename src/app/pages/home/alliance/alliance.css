@@ -1,0 +1,79 @@
+.partnershipCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  margin-bottom: 60px;
+}
+
+.partnershipContent {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.partnershipImage {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.partnershipImage img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.partnershipImage img:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+}
+
+.partnershipText {
+  flex: 1;
+  max-width: 450px;
+  text-align: center;
+}
+
+.partnershipText h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.partners {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+}
+
+.partners img {
+  width: 80px;
+  transition: transform 0.3s, filter 0.3s;
+  filter: grayscale(100%);
+}
+
+.partners img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .partnershipContent {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .partnershipText {
+    text-align: center;
+  }
+
+  .partners {
+    justify-content: center;
+  }
+}

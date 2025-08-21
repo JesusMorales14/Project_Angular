@@ -1,0 +1,24 @@
+<div class="sliderContainer">
+  <div 
+    class="slideItem" 
+    *ngFor="let slideItem of slideList; let index = index"
+    [class.active]="index === activeIndex">
+    
+    <img [src]="slideItem.imageUrl" alt="Image {{index}}">
+    
+    <div class="textOverlay" *ngIf="index === activeIndex">
+      <h2>{{ slideItem.title }}</h2>
+      <p>{{ slideItem.description}}</p>
+      <button *ngIf="slideItem.buttonText">{{ slideItem.buttonText }}</button>
+    </div>
+  </div>
+</div>
+
+<div class="sliderButtons">
+  <button 
+    *ngFor="let slideItem of slideList; let index = index"
+    [class.active]="index === activeIndex"
+    (click)="setActive(index)">
+    {{ slideItem.label }}
+  </button>
+</div>

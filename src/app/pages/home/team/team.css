@@ -1,0 +1,88 @@
+.teamCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  margin-bottom: 60px;
+}
+
+.teamContent {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.teamText {
+  flex: 1;
+  max-width: 450px;
+  text-align: center;
+}
+
+.teamText h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.teamText p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #111827;
+  margin-bottom: 20px;
+}
+
+.teamMembers {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+.teamMembers img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.teamMembers img:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.teamImage {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.teamImage img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.teamImage img:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .teamContent {
+    flex-direction: column; /* Texto e imágenes del equipo arriba, imagen general abajo */
+    gap: 30px;
+  }
+
+  .teamText {
+    text-align: center;
+  }
+
+  .teamMembers {
+    justify-content: center;
+  }
+}

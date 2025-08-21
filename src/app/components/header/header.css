@@ -43,7 +43,7 @@
   color: #3b82f6; /* Azul */
 }
 
-.header .actions .btn-login {
+.header .actions .btnLogin {
   background-color: #3b82f6;
   border: none;
   padding: 0.5rem 1rem;
@@ -53,6 +53,6 @@
   transition: background-color 0.3s;
 }
 
-.header .actions .btn-login:hover {
+.header .actions .btnLogin:hover {
   background-color: #2563eb;
 }

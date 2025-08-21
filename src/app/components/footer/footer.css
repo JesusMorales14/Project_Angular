@@ -14,28 +14,28 @@
   align-items: center;
 }
 
-.footer .footer-left img {
+.footer .footerLeft img {
   height: 50px;
   margin-bottom: 0.5rem;
 }
 
-.footer .footer-left p {
+.footer .footerLeft p {
   font-size: 0.9rem;
   margin: 0;
 }
 
-.footer .footer-right a {
+.footer .footerRight a {
   color: #9ca3af;
   margin: 0 0.5rem;
   text-decoration: none;
   transition: color 0.3s;
 }
 
-.footer .footer-right a:hover {
+.footer .footerRight a:hover {
   color: #3b82f6;
 }
 
-.footer-right {
+.footerRight {
     display: flex;
     flex-direction: column;
     align-items: center;

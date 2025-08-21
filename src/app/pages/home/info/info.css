@@ -1,0 +1,120 @@
+.sliderContainer {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.slideItem {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  opacity: 0;
+  transform: translateX(0);
+  transition: transform .8s cubic-bezier(0.77,0,0.175,1), opacity .8s ease-in-out;
+  will-change: transform, opacity;
+  z-index: 0;
+}
+
+.slideItem.active {
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 3;
+}
+
+.slideItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.textOverlay {
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  color: black;
+  max-width: 50%;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.slideItem.active .textOverlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.textOverlay h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #3b82f6;
+}
+
+.textOverlay p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.textOverlay button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #3b82f6;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.textOverlay button:hover {
+  background-color: #2563eb;
+}
+
+.sliderButtons {
+  position: absolute;
+  top: 45%;
+  right: 2%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+.sliderButtons button {
+  background-color: gray;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 50px;
+  font-weight: normal;
+  transition: all 0.3s;
+}
+
+.sliderButtons button.active {
+  background-color: #3b82f6;
+  color: white;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .textOverlay {
+    bottom: 10%;
+    left: 5%;
+    max-width: 80%;
+  }
+
+  .textOverlay h2 {
+    font-size: 1.8rem;
+  }
+
+  .textOverlay p {
+    font-size: 1rem;
+  }
+
+  .sliderButtons {
+    top: 15%;
+    right: 1%;
+  }
+}

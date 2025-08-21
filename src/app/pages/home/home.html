@@ -1,28 +1,6 @@
-<div class="slider-container">
-  <!-- Slides -->
-  <div class="slider">
-    <div 
-      class="slide" 
-      *ngFor="let item of slides; let i = index"
-      [ngClass]="item.state">
-      
-      <img [src]="item.image" alt="Imagen {{i}}">
-      
-      <div class="text-overlay">
-        <h2>{{ item.title }}</h2>
-        <p>{{ item.description }}</p>
-        <button *ngIf="item.button">{{ item.button }}</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Botones sobre la imagen -->
-  <div class="slider-buttons">
-    <button 
-      *ngFor="let item of slides; let i = index"
-      [class.active]="i === activeIndex"
-      (click)="setActive(i)">
-      {{ item.label }}
-    </button>
-  </div>
-</div>
+<app-info></app-info>
+<app-about></app-about>
+<app-awards></app-awards>
+<app-inf-business></app-inf-business>
+<app-team></app-team>
+<app-alliance></app-alliance>
