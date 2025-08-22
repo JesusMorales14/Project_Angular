@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './product-home.css'
 })
 export class ProductHome {
+asset: any;
 
 }
